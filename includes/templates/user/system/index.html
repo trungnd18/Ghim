@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+function display () {
+	$(".optionshare").slideToggle("fast");
+	return false;
+}
+</script>
+</head>
+<body>
+	<div id="body-container" >
+		<div id="header-container" class="row-fluid">
+			<div id="main-header" class="span12">
+				<div class="span2" id="logo-header">
+					My Logo
+				</div>
+				<div class="span3" id="menu-header">
+				<ul>
+					<li><a href="user.html">Me</a></li>
+					<li><a href="follow.html">Following</a></li>
+					<li><a href="tag.html">Tag</a></li>
+				</ul>
+				</div>
+				<div class="span5" id="search-header">
+				<input type="search" class="search" name="search" placeholder="Search something">
+				</div>
+				<div class="span2">
+					<div id="notifi"><a href="#">Thông báo</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="page-container" class="row-fluid" >
+			<div id="page" class="span12" >
+				<div class="span1"></div>
+				<div id="leftcol" class="span2">
+					<div id="mainleft">
+						<div class="suggest"  >
+							<div class="headtitle" style="border-bottom:1px solid #eaeaea">Để cử theo dõi</div>
+							<a href="#"><span sytle="color:red">Sun</span></a>-
+							<a href="#" onclick="follow">Theo dõi</a> 
+
+						</div>
+						<div class="listfollow">Danh sách theo dõi
+						 <div class="super-tag"><a href="#">Video (tất cả)</a>
+						<ul>
+							<li><a href="#">Âm nhạc</a></li>
+							<li><a href="#">Hài hước</a></li>
+						</ul>
+						</div>
+						<div class="super-tag"><a href="#">Người (tất cả)</a>
+						<ul>
+							<li><a href="#">Thùy Dương</a> </li>
+							<li><a href="#">Torimodo</a> </li>
+						</ul>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div id="mainContent" class="span6">
+					<div id="meshare">
+						<div class="sharecontent">
+					<textarea input="text"></textarea> share trong "op"
+					</div>
+					<a href="#" onclick="display()">Show Option</a>
+					<div class="optionshare">
+					 <input type="checkbox"> &nbsp&nbsp&nbspPost to facebook
+					 <input type="checkbox"> &nbsp&nbsp&nbspNhận thông báo
+					</div>
+					</div>
+					<div id="mecontent">
+						Những thứ được chia sẻ sắp xếp theo trạng thái nhất định
+					</div>
+
+				</div>
+				<div id="rightcol" class="span3">
+					<div id="xushare" style="height:200px; border-bottom:1px solid #eaeaea">
+						Xu hướng chia sẻ của mọi người(tất cả)
+					</div>
+					<div id="xuwatch">
+						Xu hướng xem gần đây của mọi người 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer-container">
+	<div id="mainfoot">
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?php echo $this->render('html/header.php');?>
+    <div id="main-content">
+    	<div class="frame">
+        	
+        	<div id="left">
+        		<?php echo $this->blkVideoClip();?>
+        		<?php echo $this->blkCategoryMenu();?>
+            	
+                
+            </div>
+            <div id="center">
+	           <?php echo $this->blkTopAds();?>
+                 <?php echo $this->blkSpecial();?>
+            	<?php echo $this->layout()->content;?>
+            	
+                
+            </div>
+            <div id="right" style="position:relative;">
+           <?php echo $this->blkCart();?>
+           <?php echo $this->blkTopProduct();?>
+            	
+                
+            </div>
+            
+            
+            <div class="clr"></div>
+        </div>
+    </div>
+<?php echo $this->render('html/footer.php');?>
