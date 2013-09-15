@@ -1,0 +1,90 @@
+<script type="text/javascript">
+      
+		$(function(){
+			 var timedata=0;
+			function handleServerMessage(data){
+
+					var obj = jQuery.parseJSON( data );
+					if(obj.time!=timedata)
+						{
+						document.title='có tin nhắn';
+						console.log(obj);	
+						timedata=obj.time;
+						}
+							
+			}
+		    function longPoll(timestamp)
+		    {
+		    	var queryString = { 'timestamp' : timestamp };
+			    
+		        $.get('<?php echo $this->baseUrl()?>/user/index/poll', queryString , function(data)
+		        {
+		        	var obj = jQuery.parseJSON( data );
+		            handleServerMessage(data,timestamp);
+		            longPoll(obj.time);
+		        });
+		    }
+		  //  longPoll();
+
+			})
+
+</script>
+	<div id="body-container" >
+		<div id="header-container" class="row-fluid">
+			<div id="main-header" class="span12">
+				<div class="span2" id="logo-header">
+					
+					<a href="index.html">Logo</a>
+				</div>
+				<div class="span3" id="menu-header">
+				<ul>
+					<li><a href="user.html">Me</a></li>
+					<li><a href="tag.html">Board</a></li>
+					<li><a href="friends.html">Friends</a></li>
+					
+				</ul>
+				</div>
+				<div class="span5" id="search-header">
+				<input type="search" class="search" name="search" placeholder="Search something">
+				</div>
+				<div class="span2" id="menu-header-2">
+				<ul>
+					<li><a href="creat-pin.html">+ Pin</a></li>
+					<li><a href="notifi.html"> Notify</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<div id="page-container" class="row-fluid" >
+			<div id="page" class="span12">
+				<div id="leftcol" class="span1">
+				</div>
+				<div id="mainContent" class="span8">
+					<div id="mecontent" class="span12">
+						<div class="bar-header" id="menu-content" style="padding-left:350px;border-bottom:1px solid #eaeaea;height:30px;margin-bottom:30px;">
+						<ul>
+							<li><a href="follow.html">Following</a></li>
+							<li><a href="friend.html">Friend</a></li>
+							<li><a href="everyone.html">Everyone</a></li>
+							
+						</ul>
+						
+						</div>
+						<div id="main-page">
+							<div id="row1" class="span6" style="height:600px;border-right:1px solid #eaeaea"></div>
+							<div id="row2" class="span6"></div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				<div id="rightcol" class="span3">
+					<div id="xushare" style="height:200px; border-bottom:1px solid #eaeaea">
+					</div>
+					<div id="xuwatch">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
