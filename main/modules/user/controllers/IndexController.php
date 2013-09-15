@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  *
  * @author Nguyễn Đức Trung
@@ -17,9 +17,6 @@ class IndexController extends Quac_Controller_Action {
 		$this->loadTemplate ( $template_path, 'template.ini', 'template' );
 		//		$board= new Boards_Model_Board();
 		//		Zend_Debug::dump($board->getBoard(array('_secondname'=>'q_boardmeta','id'=>1)));
-		$mongo = new Mongo();
-		$memcache= new Memcache;
-		$memcache->connect('localhost',11211) or die("Không thể kết nối");
 	}
 	public function pollAction() {
 		$this->_helper->layout ()->disableLayout ();
